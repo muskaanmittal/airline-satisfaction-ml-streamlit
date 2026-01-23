@@ -34,7 +34,6 @@ def load_models():
         "Decision Tree": joblib.load("model/dt_model.pkl"),
         "KNN": joblib.load("model/knn_model.pkl"),
         "Naive Bayes": joblib.load("model/nb_model.pkl"),
-        "Random Forest": joblib.load("model/rf_model.pkl"),
         "XGBoost": joblib.load("model/xgb_model.pkl")
     }
     return models
