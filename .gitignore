@@ -1,4 +1,5 @@
 # Model files - don't push to git
+*.pkl
 *.joblib
 
 # Python
