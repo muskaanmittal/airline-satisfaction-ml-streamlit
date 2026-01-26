@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import joblib
-
+import os
 from sklearn.metrics import accuracy_score, roc_auc_score, precision_score, recall_score
 from sklearn.metrics import f1_score, matthews_corrcoef, confusion_matrix, classification_report
 from sklearn.pipeline import Pipeline
@@ -31,14 +31,17 @@ st.write("Upload test CSV data, select a trained model, and view predictions wit
 # -----------------------------
 # Load Trained Models
 # -----------------------------
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_DIR = os.path.join(BASE_DIR, "model")
+
 @st.cache_resource
 def load_models():
     models = {
-        "Logistic Regression": joblib.load("logistic_model.pkl"),
-        "Decision Tree": joblib.load("dt_model.pkl"),
-        "KNN": joblib.load("knn_model.pkl"),
-        "Naive Bayes": joblib.load("nb_model.pkl"),
-        "XGBoost": joblib.load("xgb_model.pkl")
+        "Logistic Regression": joblib.load(os.path.join(MODEL_DIR, "logistic_model.pkl")),
+        "Decision Tree": joblib.load(os.path.join(MODEL_DIR, "dt_model.pkl")),
+        "KNN": joblib.load(os.path.join(MODEL_DIR, "knn_model.pkl")),
+        "Naive Bayes": joblib.load(os.path.join(MODEL_DIR, "nb_model.pkl")),
+        "XGBoost": joblib.load(os.path.join(MODEL_DIR, "xgb_model.pkl")),
     }
     return models
 
