@@ -5,6 +5,10 @@ import joblib
 
 from sklearn.metrics import accuracy_score, roc_auc_score, precision_score, recall_score
 from sklearn.metrics import f1_score, matthews_corrcoef, confusion_matrix, classification_report
+from sklearn.pipeline import Pipeline
+from sklearn.compose import ColumnTransformer
+from sklearn.preprocessing import StandardScaler, OneHotEncoder
+from sklearn.linear_model import LogisticRegression
 
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -30,11 +34,11 @@ st.write("Upload test CSV data, select a trained model, and view predictions wit
 @st.cache_resource
 def load_models():
     models = {
-        "Logistic Regression": joblib.load("model/logistic_model.pkl"),
-        "Decision Tree": joblib.load("model/dt_model.pkl"),
-        "KNN": joblib.load("model/knn_model.pkl"),
-        "Naive Bayes": joblib.load("model/nb_model.pkl"),
-        "XGBoost": joblib.load("model/xgb_model.pkl")
+        "Logistic Regression": joblib.load("logistic_model.pkl"),
+        "Decision Tree": joblib.load("dt_model.pkl"),
+        "KNN": joblib.load("knn_model.pkl"),
+        "Naive Bayes": joblib.load("nb_model.pkl"),
+        "XGBoost": joblib.load("xgb_model.pkl")
     }
     return models
 
