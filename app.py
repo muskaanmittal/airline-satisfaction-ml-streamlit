@@ -6,7 +6,7 @@ import os
 from sklearn.metrics import accuracy_score, roc_auc_score, precision_score, recall_score
 from sklearn.metrics import f1_score, matthews_corrcoef, confusion_matrix, classification_report
 from sklearn.pipeline import Pipeline
-from sklearn.compose import ColumnTransformer
+# from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
