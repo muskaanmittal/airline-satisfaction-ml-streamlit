@@ -16,6 +16,16 @@ from sklearn.metrics import (
 
 st.title("Airline Passenger Satisfaction Classification")
 
+st.subheader("Download Test File")
+
+with open("data/test.csv", "rb") as f:
+    st.download_button(
+        label="Download test CSV",
+        data=f,
+        file_name="test.csv",
+        mime="text/csv"
+    )
+
 uploaded_file = st.file_uploader("Upload test CSV file", type=["csv"])
 
 model_name = st.selectbox(
