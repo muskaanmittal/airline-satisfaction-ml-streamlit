@@ -82,4 +82,10 @@ if uploaded_file is not None:
     st.write("MCC:", matthews_corrcoef(y_true, y_pred))
 
     st.subheader("Confusion Matrix")
-    st.write(confusion_matrix(y_true, y_pred))
+    cm = confusion_matrix(y_true, y_pred)
+    cm_df = pd.DataFrame(
+    cm,
+    index=["Actual: Not Satisfied", "Actual: Satisfied"],
+    columns=["Predicted: Not Satisfied", "Predicted: Satisfied"])
+    st.dataframe(cm_df)
+
