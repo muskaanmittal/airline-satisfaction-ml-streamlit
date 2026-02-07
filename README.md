@@ -66,12 +66,12 @@ Each model was evaluated using the following metrics:
 
 | ML Model                 | Accuracy | AUC  | Precision | Recall | F1 Score | MCC  |
 | ------------------------ | -------- | ---- | --------- | ------ | -------- | ---- |
-| Logistic Regression      | 0.78     | 0.86 | 0.75      | 0.77   | 0.76     | 0.56 |
-| Decision Tree            | 0.94     | 0.95 | 0.93      | 0.94   | 0.94     | 0.89 |
-| KNN                      | 0.61     | 0.62 | 0.56      | 0.45   | 0.50     | 0.19 |
-| Naive Bayes              | 0.85     | 0.92 | 0.83      | 0.82   | 0.83     | 0.69 |
-| Random Forest (Ensemble) | 0.96     | 0.99 | 0.97      | 0.95   | 0.96     | 0.93 |
-| XGBoost (Ensemble)       | 0.97     | 0.99 | 0.97      | 0.95   | 0.96     | 0.93 |
+| Logistic Regression      | 0.87     | 0.92 | 0.84      | 0.84   | 0.84     | 0.72 |
+| Decision Tree            | 0.94     | 0.94 | 0.93      | 0.94   | 0.94     | 0.89 |
+| KNN                      | 0.74     | 0.79 | 0.72      | 0.66   | 0.69     | 0.47 |
+| Naive Bayes              | 0.87     | 0.92 | 0.82      | 0.82   | 0.84     | 0.72 |
+| Random Forest (Ensemble) | 0.96     | 0.99 | 0.97      | 0.94   | 0.96     | 0.92 |
+| XGBoost (Ensemble)       | 0.96     | 0.99 | 0.97      | 0.95   | 0.96     | 0.93 |
 
 ---
 
@@ -84,41 +84,6 @@ Each model was evaluated using the following metrics:
 | **Naive Bayes** | Naive Bayes achieved reasonable accuracy and fast training time. However, its strong independence assumption between features limits its performance compared to tree-based and ensemble models. |
 | **Random Forest (Ensemble)** | Random Forest achieved excellent performance with very high accuracy and AUC. It effectively handles feature interactions and reduces overfitting by combining multiple decision trees, making it a robust and reliable model. |
 | **XGBoost (Ensemble)** | XGBoost delivered the best overall performance with the highest accuracy, AUC, and MCC score. Its boosting mechanism efficiently captures complex patterns and provides superior generalization on large datasets. |
-
----
-
-## Project Structure
-
-airline-satisfaction-ml-streamlit/
-│
-│-- app.py  
-│-- requirements.txt  
-│-- README.md  
-│
-└── model/  
- │-- logistic_1.ipynb  
- │-- DT_1.ipynb  
- │-- KNN_1.ipynb  
- │-- NBC_1.ipynb  
- │-- Random_fore_1.ipynb  
- │-- XG_boost_1.ipynb
-
----
-
-## Streamlit Application Features
-
-The Streamlit web application provides:
-
-- CSV dataset upload option (test data only)
-- Model selection dropdown
-- Display of evaluation metrics
-- Confusion matrix and classification report visualization
-
----
-
-## Deployment
-
-The application is deployed on Streamlit Community Cloud.
 
 ---
 
