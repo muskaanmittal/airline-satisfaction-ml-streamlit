@@ -66,10 +66,10 @@ Each model was evaluated using the following metrics:
 
 | ML Model                 | Accuracy | AUC  | Precision | Recall | F1 Score | MCC  |
 | ------------------------ | -------- | ---- | --------- | ------ | -------- | ---- |
-| Logistic Regression      | 0.87     | 0.92 | 0.84      | 0.84   | 0.84     | 0.72 |
+| Logistic Regression      | 0.86     | 0.92 | 0.85      | 0.83   | 0.84     | 0.72 |
 | Decision Tree            | 0.94     | 0.94 | 0.93      | 0.94   | 0.94     | 0.89 |
-| KNN                      | 0.74     | 0.79 | 0.72      | 0.66   | 0.69     | 0.47 |
-| Naive Bayes              | 0.87     | 0.92 | 0.82      | 0.82   | 0.84     | 0.72 |
+| KNN                      | 0.74     | 0.79 | 0.72      | 0.66   | 0.69     | 0.46 |
+| Naive Bayes              | 0.86     | 0.92 | 0.85      | 0.82   | 0.84     | 0.72 |
 | Random Forest (Ensemble) | 0.96     | 0.99 | 0.97      | 0.94   | 0.96     | 0.92 |
 | XGBoost (Ensemble)       | 0.96     | 0.99 | 0.97      | 0.95   | 0.96     | 0.93 |
 
@@ -121,5 +121,4 @@ Overall, **ensemble models (Random Forest and XGBoost)** clearly outperform trad
 
 Muskaan Mittal
 2025AA05875
-M.Tech (AIML / DSE)  
-BITS Pilani – Work Integrated Learning Programme
+M.Tech (AIML)
