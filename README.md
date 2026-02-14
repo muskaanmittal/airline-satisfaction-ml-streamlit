@@ -77,13 +77,43 @@ Each model was evaluated using the following metrics:
 
 ## Model Performance Observations
 
-| ML Model Name | Observation about model performance |
-| **Logistic Regression** | Logistic Regression provided a strong baseline model with moderate accuracy. It performs well on large datasets and gives stable predictions, but its performance is limited because it assumes a linear decision boundary and cannot fully capture complex non-linear relationships in the data. |
-| **Decision Tree** | Decision Tree achieved high accuracy and good precision-recall balance. It is easy to interpret and captures non-linear patterns well, but it may slightly overfit compared to ensemble models. |
-| **KNN** | KNN performed the weakest among all models due to the large dataset size and high dimensionality. Distance-based learning becomes inefficient in high-dimensional spaces, which leads to lower accuracy and poor generalization. |
-| **Naive Bayes** | Naive Bayes achieved reasonable accuracy and fast training time. However, its strong independence assumption between features limits its performance compared to tree-based and ensemble models. |
-| **Random Forest (Ensemble)** | Random Forest achieved excellent performance with very high accuracy and AUC. It effectively handles feature interactions and reduces overfitting by combining multiple decision trees, making it a robust and reliable model. |
-| **XGBoost (Ensemble)** | XGBoost delivered the best overall performance with the highest accuracy, AUC, and MCC score. Its boosting mechanism efficiently captures complex patterns and provides superior generalization on large datasets. |
+### Logistic Regression
+
+Logistic Regression achieved good performance with **87% accuracy and 0.92 AUC**, providing a strong baseline model. It maintained balanced precision and recall (0.84), indicating stable predictions. However, its performance is slightly lower than tree-based models due to its limitation in capturing non-linear relationships.
+
+---
+
+### Decision Tree
+
+Decision Tree performed significantly better with **94% accuracy and 0.94 AUC**, along with strong precision and recall (~0.93–0.94). It effectively captured non-linear patterns in the data, resulting in a high F1 score and MCC (0.89). However, it may still be prone to slight overfitting.
+
+---
+
+### K-Nearest Neighbors (KNN)
+
+KNN showed the weakest performance with **74% accuracy and 0.79 AUC**. Lower recall (0.66) and MCC (0.47) indicate poor generalization. This is likely due to high dimensionality and large dataset size, where distance-based methods become less effective.
+
+---
+
+### Naive Bayes
+
+Naive Bayes performed comparably to Logistic Regression with **87% accuracy and 0.92 AUC**. It maintained balanced precision and recall (~0.82–0.84), but its strong independence assumption limits its ability to capture feature interactions, resulting in slightly lower performance than tree-based models.
+
+---
+
+### Random Forest (Ensemble)
+
+Random Forest achieved excellent results with **96% accuracy and 0.99 AUC**, along with very high precision (0.97) and F1 score (0.96). It effectively reduces overfitting and captures complex feature interactions, leading to a high MCC (0.92), making it one of the most robust models.
+
+---
+
+### XGBoost (Ensemble)
+
+XGBoost delivered the best overall performance with **96% accuracy, 0.99 AUC, and highest MCC (0.93)**. It slightly outperformed Random Forest in recall (0.95), indicating better detection of positive cases. Its boosting mechanism allows it to capture complex patterns and generalize well on large datasets.
+
+---
+
+Overall, **ensemble models (Random Forest and XGBoost)** clearly outperform traditional models. Among them, **XGBoost is the best-performing model**, achieving the highest overall balance across all evaluation metrics.
 
 ---
 
